@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <title>搜索</title>
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
+    <style>
+        ::-webkit-input-placeholder {
+            font-size: 1.6rem;
+            color: #91dae4;
+        }
+    </style>
+</head>
+
+<body>
+<header class="head posi head_search">
+    <input type="button" value="" class="btn_back" id="footPlace"/>
+    <input type="button" value="" class="btn_search"/>
+    <input type="search" placeholder="搜索您想去的地方" class="ipt_want"/>
+</header>
+<!--<ul class="list_search">
+    <li>奥莱<span class="blue">多</span><b class="icon_arow"></b></li>
+    <li>萨加门<span class="blue">多</span><b class="icon_arow"></b></li>
+</ul>-->
+
+<section class="out out2" id="no_record_section" style="display: none">
+    <article class="inner">
+        <div class="norecord">
+            <p>很遗憾</p>
+            <p>你填写的关键字未找到您想去的城市</p>
+        </div>
+    </article>
+</section>
+
+<script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/static/js/scale.js"></script>
+<script type="text/javascript" src="/static/js/place.js"></script>
+<script type="text/javascript">
+    $(".btn_search").click(function(){
+        $("#no_record_section").css('display','block');
+        /*$.ajax({
+            url:'',
+            type: 'post',
+            dataType: 'json',
+            data: {},
+            success: function(data){
+                $(".norecord").css('display','block');
+            }
+        })*/
+    });
+</script>
+</body>
+</html>
